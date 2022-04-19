@@ -3,6 +3,7 @@ const morgan = require("morgan")
 require("dotenv").config()
 const connetDB = require("./config/connetDB")
 const foodRoute = require("./routes/foodRoute")
+const userRoute = require("./routes/userRoute");
 
 
 
