@@ -3,6 +3,7 @@ const morgan = require("morgan")
 require("dotenv").config()
 const connetDB = require("./config/connetDB")
 const foodRoute = require("./routes/foodRoute")
+const userRoute = require("./routes/userRoute");
 
 
 
@@ -13,6 +14,7 @@ connetDB()
 app.use(express.json())
 app.use(morgan("dev"))
 app.use(foodRoute)
+app.use("/api/users", userRoute)
 
 const PORT = process.env.PORT||9000
 //Home route
